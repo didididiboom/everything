@@ -1,0 +1,52 @@
+<!--
+ * @Author: xdli
+ * @Date: 2021-06-02 19:10:33
+ * @LastEditTime: 2021-06-02 19:29:59
+ * @LastEditors: xdli
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{count}}
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    count: 0,
+                    unWatch: null
+                }
+            },
+            created() {
+                this.unwatchFn = this.$watch('count', function(){
+                    console.log('count 新值：'+newVal)
+                })
+            },
+            mounted() {
+                this.init()
+            },
+            methods: {
+                init() {
+                    this.unwatchFn()
+                    for(let i = 0; i < 10; i++) {
+                        // if(i === 3) {
+                        //     this.count = i
+                            this.unwatchFn()
+                        // }
+                    }
+                }
+            },
+
+        })
+    </script>
+</body>
+</html>

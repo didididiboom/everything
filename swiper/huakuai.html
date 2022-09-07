@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <link rel="stylesheet" href="https://fezz.che300.com/libs/reset/reset.css">
+    <script src="https://fezz.che300.com/web/m/wap3.0/js/uglify/home/flexible.js"></script>
+    <script src="https://fezz.che300.com/libs/che300Share/share.min.1.4.2.js"></script>
+    <link rel="stylesheet" href="https://fezz.che300.com/libs/swiper/4.0.6/swiper.min.css">
+    <style>
+        .new-top {
+            padding-top: 0.4rem;
+        }
+
+        .model-info {
+            margin: 0 0.4rem 0.266667rem;
+            background-color: #fff;
+            border-radius: 0.21333rem;
+        }
+
+        .model-info .model-info-header {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding: 0 0.4rem;
+            line-height: 1.28rem;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .model-info .model-info-title {
+            position: relative;
+            margin-left: 0.346667rem;
+            font-weight: bold;
+            font-size: 0.426667rem;
+        }
+
+        .model-info .model-info-titleR {
+            font-size: 0.32rem;
+            color: #999;
+        }
+
+        .model-info .model-info-title::before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            left: -0.293333rem;
+            top: 0.4rem;
+            width: 0.08rem;
+            height: 0.48rem;
+            background-image: url(https://assets.che300.com/feimg/h5/comprehensive-report/carcondition_pic_tittle@3x.png);
+            background-size: 100% 100%;
+        }
+
+        .model-info .model-info-content .model-info-item {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            padding: 0.3rem 0.4rem 0;
+        }
+
+        .model-info .model-info-content .item-name {
+            font-size: 0.426667rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .model-info .model-info-content .item-vin {
+            margin-top: 0.1rem;
+            font-size: 0.426667rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .model-info .model-info-content .model-info-detail {
+            font-size: 0.32rem;
+        }
+
+        .model-info .model-info-content .model-info-detail .first-line,
+        .model-info .model-info-content .model-info-detail .sec-line {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+            margin-top: 0.32rem;
+        }
+
+        .model-info .model-info-content .model-info-detail .marginBottom {
+            margin-bottom: 0.25rem;
+        }
+
+        .model-info .model-info-content .model-info-detail .column-3-1 {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin: 0 0 0.066667rem;
+        }
+
+        .model-info .model-info-content .model-info-detail .column-3-1 .value {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin: 0 0 0.066667rem;
+        }
+
+        .model-info .model-info-content .model-info-detail .column-3-1 .key {
+            font-size: 0.32rem;
+            color: #999;
+        }
+
+        .model-info .model-info-content .model-info-detail .column-3-1 .to-car-config {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .model-info .model-info-content .model-info-detail .column-3-1 .to-car-config span {
+            width: 0.7rem;
+        }
+
+        .model-info .model-info-content .model-info-detail .column-3-1 .to-car-config img {
+            width: 0.16rem;
+            height: 0.266667rem;
+            display: inline-block;
+            margin-left: 0.2rem;
+        }
+
+        .model-info .history-report-time {
+            padding: 0 0.386667rem 0.386667rem;
+            font-size: 0.32rem;
+            color: #333333;
+        }
+
+        .condition-price {
+            padding-bottom: 0.02rem;
+            margin: 0.266667rem 0.4rem;
+            background-color: #fff;
+            border-radius: 0.21333rem;
+        }
+
+        .condition-price .condition-price-header {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding: 0 0.4rem;
+            line-height: 1.28rem;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .condition-price .condition-price-title {
+            position: relative;
+            margin-left: 0.346667rem;
+            font-weight: bold;
+            font-size: 0.426667rem;
+        }
+
+        .condition-price .condition-price-titleR {
+            font-size: 0.32rem;
+            color: #999;
+        }
+
+        .condition-price .condition-price-title::before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            left: -0.293333rem;
+            top: 0.4rem;
+            width: 0.08rem;
+            height: 0.48rem;
+            background-image: url(https://assets.che300.com/feimg/h5/comprehensive-report/carcondition_pic_tittle@3x.png);
+            background-size: 100% 100%;
+        }
+
+        .condition-price .condition-price-content {
+            margin: 0.386667rem;
+            background-color: #f5f5f5;
+            border: 1px solid #f5f5f5;
+        }
+
+        .condition-price-top {
+            position: relative;
+            margin-top: 0.533333rem;
+        }
+
+        .condition-price-top .price-top-item {
+            font-size: 0.32rem;
+            color: #333333;
+        }
+
+        .condition-price-top .price-reset {
+            position: absolute;
+            right: 0.133333rem;
+            top: -0.1rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            border: 1px solid #cccccc;
+            border-radius: 0.32rem;
+            padding: 0.066667rem 0.2rem;
+        }
+
+        .condition-price-top .price-reset img {
+            width: 0.32rem;
+            height: 0.32rem;
+        }
+
+        .condition-price-top .price-reset span {
+            margin-left: 0.133333rem;
+            font-size: 0.32rem;
+            color: #666666;
+        }
+
+        .flex-center {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        .price-top-show-sale {
+            margin-top: 0.24rem;
+            font-size: 0.693333rem;
+            color: #2a8cff;
+            font-weight: bold;
+        }
+
+        .price-top-show-buy {
+            margin-top: 0.24rem;
+            font-size: 0.693333rem;
+            color: #ff6600;
+            font-weight: bold;
+        }
+
+        .condition-price-slider {
+            display: inline-block;
+            margin: 10px auto 0;
+        }
+
+        .plan_box {
+            margin: 0.346667rem 0.4rem 0;
+            height: 0.64rem;
+            background: #ffffff;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            position: relative;
+            border: 1px solid #e0e0e0;
+        }
+
+        .plan_box .slider-sale {
+            cursor: -webkit-grab;
+            cursor: grab;
+            position: absolute;
+            left: 0px;
+        }
+
+        .plan_box .slider-sale::before {
+            content: '';
+            display: block;
+            background-image: url(https://assets.che300.com/feimg/h5pages/capp/50601/icon_mark_b@3x.png);
+            background-size: 100% 100%;
+            width: 0.533333rem;
+            height: 0.5rem;
+            position: absolute;
+            left: -0.3rem;
+            top: -0.45rem;
+            z-index: 2;
+        }
+
+        .plan_box .slider-buy {
+            cursor: -webkit-grab;
+            cursor: grab;
+            position: absolute;
+            left: 0px;
+        }
+
+        .plan_box .slider-buy::before {
+            content: '';
+            display: block;
+            background-image: url(https://assets.che300.com/feimg/h5pages/capp/50601/icon_mark_o@3x.png);
+            background-size: 100% 100%;
+            width: 0.533333rem;
+            height: 0.5rem;
+            position: absolute;
+            left: -0.3rem;
+            top: -0.45rem;
+            z-index: 2;
+        }
+
+        .price-label-position {
+            position: relative;
+        }
+
+        .price-label-position .condition-price-label {
+            position: absolute;
+            bottom: 0.1rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+            font-size: 0.293333rem;
+            color: #666666;
+            height: 0.6rem;
+            width: 100%;
+        }
+
+        .price-label-position .condition-price-label span {
+            width: 50%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            padding-top: 0.106667rem;
+            z-index: 1;
+        }
+
+        .price-label-position .condition-price-label span:first-child {
+            border-right: 1px solid #e0e0e0;
+        }
+
+        .condition-price-list {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            margin: 0.1rem 0.4rem 0;
+            padding-bottom: 0.3rem;
+            font-size: 0.293333rem;
+            color: #666666;
+        }
+
+        .share-style {
+            margin-bottom: 0.22rem;
+        }
+
+        /*# sourceMappingURL=index.css.map */
+    </style>
+</head>
+
+<body>
+    <div id="vue_det">
+        <div class="condition-price">
+            <div class="condition-price-header">
+                <span class="condition-price-title">车300车况定价</span>
+            </div>
+            <div class="condition-price-content">
+                <div class="condition-price-top">
+                    <div class="flex-center price-top-item">
+                        {{ showText ? '车况定价(万)' : '普通估值(万)' }}
+                    </div>
+                </div>
+                <div :class="[
+                        'flex-center',
+                        curIndex === 0 ? 'price-top-show-sale' : 'price-top-show-buy'
+                    ]">
+                    {{ planNum }}
+                </div>
+                <!-- 滑块 -->
+                <div class="condition-price-slider">
+                    <div class="plan_box" ref="wrapper">
+                        <div v-if="conditionShare" :class="[curIndex === 0 ? 'slider-sale' : 'slider-buy']"
+                            ref="slider"></div>
+                    </div>
+                </div>
+                <div class="price-label-position">
+                    <div class="condition-price-label">
+                        <template v-if="curIndex === 0">
+                            <span>个人交易价</span>
+                            <span>车商零售价</span>
+                        </template>
+                        <template v-else>
+                            <span>车商收购价</span>
+                            <span>个人交易价</span>
+                        </template>
+                    </div>
+                </div>
+                <div class="condition-price-list" ref="listDom">
+                    <template class="price-item" v-for="(item, index) in showPriceList">
+                        <span :class="`price-item-${index}`">{{ item.value }}</span>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://fezz.che300.com/libs/swiper/7.3.1/swiper.min.js"></script>
+
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#vue_det',
+            data: {
+                planNum: 7.21,
+                curIndex: 0,
+                showPriceList: [
+                    {
+                        index: 0,
+                        key: 'individual_low_sold_price', //个人最低交易价
+                        value: 6.88,
+                        class: 'price-item-0'
+                    },
+                    {
+                        index: 1,
+                        key: 'individual_price', // 个人交易价
+                        value: 7.01,
+                        class: 'price-item-1'
+                    },
+                    {
+                        index: 2,
+                        key: 'dealer_low_sold_price', // 个人最高交易价
+                        value: 7.06,
+                        class: 'price-item-2'
+                    },
+                    {
+                        index: 3,
+                        key: 'dealer_price', // 车商零售价
+                        value: 7.21,
+                        class: 'price-item-3'
+                    },
+                    {
+                        index: 4,
+                        key: 'dealer_high_sold_price', // 车商最高零售价
+                        value: 7.66,
+                        class: 'price-item-4'
+                    }
+                ],
+                // 卖车价
+                salePrice: [
+                    {
+                        index: 0,
+                        key: 'dealer_low_buy_price', // 车商最低收车价
+                        value: 0,
+                        class: 'price-item-0'
+                    },
+                    {
+                        index: 1,
+                        key: 'dealer_auction_price', // 车商收车价
+                        value: 0,
+                        class: 'price-item-1'
+                    },
+                    {
+                        index: 2,
+                        key: 'individual_low_sold_price', // 车商最高收车价
+                        value: 0,
+                        class: 'price-item-2'
+                    },
+                    {
+                        index: 3,
+                        key: 'individual_price', // 个人交易价
+                        value: 0,
+                        class: 'price-item-3'
+                    },
+                    {
+                        index: 4,
+                        key: 'dealer_low_sold_price', // 个人最高交易价
+                        value: 0,
+                        class: 'price-item-4'
+                    }
+                ],
+                // 买车价
+                buyPrice: [
+                    {
+                        index: 0,
+                        key: 'individual_low_sold_price', //个人最低交易价
+                        value: 6.88,
+                        class: 'price-item-0'
+                    },
+                    {
+                        index: 1,
+                        key: 'individual_price', // 个人交易价
+                        value: 7.01,
+                        class: 'price-item-1'
+                    },
+                    {
+                        index: 2,
+                        key: 'dealer_low_sold_price', // 个人最高交易价
+                        value: 7.06,
+                        class: 'price-item-2'
+                    },
+                    {
+                        index: 3,
+                        key: 'dealer_price', // 车商零售价
+                        value: 7.21,
+                        class: 'price-item-3'
+                    },
+                    {
+                        index: 4,
+                        key: 'dealer_high_sold_price', // 车商最高零售价
+                        value: 7.66,
+                        class: 'price-item-4'
+                    }
+                ],
+                slideIndex: 0,
+                conditionShare: true,
+                startValue: 0,
+                endValue: 0,
+                showText: false
+            },
+            mounted() {
+                this.$nextTick(() => {
+                    this.touchStart(this.$refs.wrapper);
+                });
+            },
+            methods: {
+                touchStart(el) {
+                    let _this = this;
+                    // 获取定价模块宽度
+                    let condition = _this.$refs.listDom.getBoundingClientRect();
+                    let rect = el.getBoundingClientRect();
+
+                    el.style.width = condition.width + 'px';
+                    let slider = _this.$refs.slider;
+                    if (this.conditionShare) {
+                        if (_this.planNum) {
+                            let planNum = Number(_this.planNum);
+
+                            // 找寻第一个showPriceList中比planNum大或者相等的数值
+                            let getIndex = _this.showPriceList.find(item => {
+                                return item.value >= planNum;
+                            });
+
+                            // 找到showPriceList中第二个比planNum大或者相等数值
+                            let getNextIndex = _this.showPriceList[getIndex.index + 1];
+                            let getPrevtIndex = _this.showPriceList[getIndex.index - 1];
+
+                            let getIndexValue = Number(getIndex.value);
+                            let getNextValue = Number(getNextIndex.value);
+                            let getPrevValue = Number(getPrevtIndex.value);
+
+                            // 获取其中一个距离
+                            let oneWidth = condition.width / 4;
+                            let baseLeft = oneWidth * getIndex.index;
+
+                            if (getIndex.index === 1) {
+                                let rate =
+                                    ((planNum - getPrevValue) / (getIndexValue - getPrevValue)) * oneWidth;
+                                slider.style.left = Number(rate) + 'px';
+                            } else {
+                                let rate =
+                                    ((planNum - getIndexValue) / (getNextValue - getIndexValue)) * oneWidth;
+                                slider.style.left = Number(baseLeft + rate) + 'px';
+                            }
+                        }
+
+                        slider.ontouchstart = function (event) {
+                            event.preventDefault();
+                            document.ontouchmove = function (e) {
+                                // 中间位置
+                                let oneWidth = condition.width / 4;
+                                
+                                let oEvent = e.touches[0];
+                                let sliderX = oEvent.clientX - 139;
+                                if (sliderX < 0) {
+                                    sliderX = 0;
+                                } else if (sliderX > 890) {
+                                    sliderX = 890;
+                                }
+                                if (sliderX > condition.width) {
+                                    sliderX = condition.width;
+                                }
+                                //滑块的位置
+                                slider.style.left = sliderX + 'px';
+                                let sliderLeft = sliderX;
+
+                                // 判断sliderLeft除以oneWidth的值
+                                let index = Math.floor(sliderLeft / oneWidth);
+
+                                if (index < 4) {
+                                    // 按照滑动的距离与oneWidth的比例计算出index滑动的数值
+                                    let rate = (sliderX - oneWidth * index) / oneWidth;
+                                    let calue =
+                                        Number(_this.showPriceList[index + 1].value) -
+                                        Number(_this.showPriceList[index].value);
+
+                                    _this.planNum = Number(
+                                        Number(_this.showPriceList[index].value) + rate * calue
+                                    ).toFixed(2);
+                                } else {
+                                    _this.planNum = _this.showPriceList[4].value;
+                                }
+                            };
+                            document.ontouchend = function () {
+                                document.ontouchmove = null;
+                                document.ontouchstart = null;
+                            };
+                        };
+                    }
+                },
+            }
+        })
+    </script>
+</body>
+
+</html>

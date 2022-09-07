@@ -1,0 +1,87 @@
+<!--
+ * @Author: xdli
+ * @Date: 2022-05-31 11:48:26
+ * @LastEditTime: 2022-05-31 11:48:26
+ * @LastEditors: xdli
+ * @Decription: 
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <link rel="stylesheet" href="https://fezz.che300.com/libs/swiper/4.0.6/swiper.min.css">
+    <style>
+        .swiper {
+            /* width: 600px; */
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="vue_det">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background: #4B5CC4;">Slide 1</div>
+                <div class="swiper-slide" style="background: #525288;">Slide 2</div>
+                <div class="swiper-slide" style="background: #E29C45;">Slide 3</div>
+                <div class="swiper-slide" style="background: #0C8918;">Slide 4</div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- 如果需要滚动条 -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+    <script src="https://fezz.che300.com/libs/swiper/4.0.6/swiper.js"></script>
+
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#vue_det',
+            data: {
+                site: "菜鸟教程",
+                url: "www.runoob.com",
+                alexa: "10000"
+            },
+            mounted() {
+                this.swiper()
+            },
+            methods: {
+                swiper() {
+                    var mySwiper = new Swiper('.swiper', {
+                        direction: 'horizontal', // 横向播放
+                        loop: true, // 循环模式选项
+
+                        // 如果需要分页器
+                        pagination: {
+                            el: '.swiper-pagination',
+                        },
+
+                        // 如果需要前进后退按钮
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+
+                        // 如果需要滚动条
+                        scrollbar: {
+                            el: '.swiper-scrollbar',
+                        },
+                    })
+                    mySwiper.on('slideChangeTransitionEnd', function () {
+                        console.log('activeIndex:', mySwiper.activeIndex, 'realIndex:', mySwiper.realIndex) //切换结束时，告诉我现在是第几个slide
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

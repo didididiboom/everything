@@ -1,0 +1,369 @@
+.new-top {
+  padding-top: 0.4rem;
+}
+
+.model-info {
+  margin: 0 0.4rem 0.266667rem;
+  background-color: #fff;
+  border-radius: 0.21333rem;
+}
+
+.model-info .model-info-header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 0.4rem;
+  line-height: 1.28rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.model-info .model-info-title {
+  position: relative;
+  margin-left: 0.346667rem;
+  font-weight: bold;
+  font-size: 0.426667rem;
+}
+
+.model-info .model-info-titleR {
+  font-size: 0.32rem;
+  color: #999;
+}
+
+.model-info .model-info-title::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: -0.293333rem;
+  top: 0.4rem;
+  width: 0.08rem;
+  height: 0.48rem;
+  background-image: url(https://assets.che300.com/feimg/h5/comprehensive-report/carcondition_pic_tittle@3x.png);
+  background-size: 100% 100%;
+}
+
+.model-info .model-info-content .model-info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.3rem 0.4rem 0;
+}
+
+.model-info .model-info-content .item-name {
+  font-size: 0.426667rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.model-info .model-info-content .item-vin {
+  margin-top: 0.1rem;
+  font-size: 0.426667rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.model-info .model-info-content .model-info-detail {
+  font-size: 0.32rem;
+}
+
+.model-info .model-info-content .model-info-detail .first-line,
+.model-info .model-info-content .model-info-detail .sec-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 0.32rem;
+}
+
+.model-info .model-info-content .model-info-detail .marginBottom {
+  margin-bottom: 0.25rem;
+}
+
+.model-info .model-info-content .model-info-detail .column-3-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 0.066667rem;
+}
+
+.model-info .model-info-content .model-info-detail .column-3-1 .value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 0.066667rem;
+}
+
+.model-info .model-info-content .model-info-detail .column-3-1 .key {
+  font-size: 0.32rem;
+  color: #999;
+}
+
+.model-info .model-info-content .model-info-detail .column-3-1 .to-car-config {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.model-info .model-info-content .model-info-detail .column-3-1 .to-car-config span {
+  width: 0.7rem;
+}
+
+.model-info .model-info-content .model-info-detail .column-3-1 .to-car-config img {
+  width: 0.16rem;
+  height: 0.266667rem;
+  display: inline-block;
+  margin-left: 0.2rem;
+}
+
+.model-info .history-report-time {
+  padding: 0 0.386667rem 0.386667rem;
+  font-size: 0.32rem;
+  color: #333333;
+}
+
+.condition-price {
+  padding-bottom: 0.02rem;
+  margin: 0.266667rem 0.4rem;
+  background-color: #fff;
+  border-radius: 0.21333rem;
+}
+
+.condition-price .condition-price-header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 0.4rem;
+  line-height: 1.28rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.condition-price .condition-price-title {
+  position: relative;
+  margin-left: 0.346667rem;
+  font-weight: bold;
+  font-size: 0.426667rem;
+}
+
+.condition-price .condition-price-titleR {
+  font-size: 0.32rem;
+  color: #999;
+}
+
+.condition-price .condition-price-title::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: -0.293333rem;
+  top: 0.4rem;
+  width: 0.08rem;
+  height: 0.48rem;
+  background-image: url(https://assets.che300.com/feimg/h5/comprehensive-report/carcondition_pic_tittle@3x.png);
+  background-size: 100% 100%;
+}
+
+.condition-price .condition-price-content {
+  margin: 0.386667rem;
+  background-color: #f5f5f5;
+  border: 1px solid #f5f5f5;
+}
+
+.condition-price-top {
+  position: relative;
+  margin-top: 0.533333rem;
+}
+
+.condition-price-top .price-top-item {
+  font-size: 0.32rem;
+  color: #333333;
+}
+
+.condition-price-top .price-reset {
+  position: absolute;
+  right: 0.133333rem;
+  top: -0.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #cccccc;
+  border-radius: 0.32rem;
+  padding: 0.066667rem 0.2rem;
+}
+
+.condition-price-top .price-reset img {
+  width: 0.32rem;
+  height: 0.32rem;
+}
+
+.condition-price-top .price-reset span {
+  margin-left: 0.133333rem;
+  font-size: 0.32rem;
+  color: #666666;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.price-top-show-sale {
+  margin-top: 0.24rem;
+  font-size: 0.693333rem;
+  color: #2a8cff;
+  font-weight: bold;
+}
+
+.price-top-show-buy {
+  margin-top: 0.24rem;
+  font-size: 0.693333rem;
+  color: #ff6600;
+  font-weight: bold;
+}
+
+.condition-price-slider {
+  display: inline-block;
+  margin: 10px auto 0;
+}
+
+.plan_box {
+  margin: 0.346667rem 0.4rem 0;
+  height: 0.64rem;
+  background: #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  border: 1px solid #e0e0e0;
+}
+
+.plan_box .slider-sale {
+  cursor: -webkit-grab;
+  cursor: grab;
+  position: absolute;
+  left: 0px;
+}
+
+.plan_box .slider-sale::before {
+  content: '';
+  display: block;
+  background-image: url(https://assets.che300.com/feimg/h5pages/capp/50601/icon_mark_b@3x.png);
+  background-size: 100% 100%;
+  width: 0.533333rem;
+  height: 0.5rem;
+  position: absolute;
+  left: -0.3rem;
+  top: -0.45rem;
+  z-index: 2;
+}
+
+.plan_box .slider-buy {
+  cursor: -webkit-grab;
+  cursor: grab;
+  position: absolute;
+  left: 0px;
+}
+
+.plan_box .slider-buy::before {
+  content: '';
+  display: block;
+  background-image: url(https://assets.che300.com/feimg/h5pages/capp/50601/icon_mark_o@3x.png);
+  background-size: 100% 100%;
+  width: 0.533333rem;
+  height: 0.5rem;
+  position: absolute;
+  left: -0.3rem;
+  top: -0.45rem;
+  z-index: 2;
+}
+
+.price-label-position {
+  position: relative;
+}
+
+.price-label-position .condition-price-label {
+  position: absolute;
+  bottom: 0.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 0.293333rem;
+  color: #666666;
+  height: 0.6rem;
+  width: 100%;
+}
+
+.price-label-position .condition-price-label span {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 0.106667rem;
+  z-index: 1;
+}
+
+.price-label-position .condition-price-label span:first-child {
+  border-right: 1px solid #e0e0e0;
+}
+
+.condition-price-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0.1rem 0.4rem 0;
+  padding-bottom: 0.3rem;
+  font-size: 0.293333rem;
+  color: #666666;
+}
+
+.share-style {
+  margin-bottom: 0.22rem;
+}
+/*# sourceMappingURL=index.css.map */
