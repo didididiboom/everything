@@ -54,8 +54,10 @@ function ScheduleInfo() {
 }
 
 function generateTime(schedule, renderStart, renderEnd) {
+    console.log(schedule, renderStart, renderEnd);
     var startDate = moment(renderStart.getTime())
     var endDate = moment(renderEnd.getTime());
+    console.log(startDate, endDate);
     var diffDate = endDate.diff(startDate, 'days');
 
     schedule.isAllday = chance.bool({likelihood: 30});
@@ -83,7 +85,9 @@ function generateTime(schedule, renderStart, renderEnd) {
     schedule.end = endDate
         .add(chance.integer({min: 1, max: 4}), 'hour')
         .toDate();
+    console.log(schedule.start, schedule.end);
 
+    console.log(new Date('2022-09-29T15:59:59.000Z'), '===');
     if (!schedule.isAllday && chance.bool({likelihood: 20})) {
         schedule.goingDuration = chance.integer({min: 30, max: 120});
         schedule.comingDuration = chance.integer({min: 30, max: 120});;
@@ -147,7 +151,6 @@ function generateRandomSchedule(calendar, renderStart, renderEnd) {
         schedule.comingDuration = travelTime;
     }
 
-    console.log(schedule, '====');
     ScheduleList.push(schedule);
 }
 

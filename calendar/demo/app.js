@@ -6,12 +6,10 @@
 /* global findCalendar, CalendarList, ScheduleList, generateSchedule */
 
 (function(window, Calendar) {
-    console.log(111111111);
     var cal, resizeThrottled;
     var useCreationPopup = true;
     var useDetailPopup = true;
     var datePicker, selectedCalendar;
-    console.log(CalendarList);
 
     cal = new Calendar('#calendar', {
         defaultView: 'month',
@@ -128,8 +126,6 @@
         var options = cal.getOptions();
         var viewName = '';
 
-        console.log(target);
-        console.log(action);
         switch (action) {
             case 'toggle-daily':
                 viewName = 'day';
@@ -224,7 +220,7 @@
             start: start,
             end: end,
             category: isAllDay ? 'allday' : 'time',
-            dueDateClass: '',
+            // dueDateClass: '',
             color: calendar.color,
             bgColor: calendar.bgColor,
             dragBgColor: calendar.bgColor,
@@ -232,7 +228,6 @@
             state: 'Busy'
         }]);
 
-        console.log(cal);
 
         $('#modal-new-schedule').modal('hide');
     }
@@ -276,7 +271,7 @@
             start: scheduleData.start,
             end: scheduleData.end,
             category: scheduleData.isAllDay ? 'allday' : 'time',
-            dueDateClass: '',
+            // dueDateClass: '',
             color: calendar.color,
             bgColor: calendar.bgColor,
             dragBgColor: calendar.bgColor,
@@ -291,7 +286,6 @@
             schedule.bgColor = calendar.bgColor;
             schedule.borderColor = calendar.borderColor;
         }
-        console.log(schedule, '--');
 
         cal.createSchedules([schedule]);
 
@@ -403,7 +397,6 @@
     }
 
     function setSchedules() {
-        console.log(ScheduleList);
         cal.clear();
         generateSchedule(cal.getViewName(), cal.getDateRangeStart(), cal.getDateRangeEnd());
         cal.createSchedules(ScheduleList);
@@ -453,5 +446,4 @@
         );
     });
     calendarList.innerHTML = html.join('\n');
-    console.log(calendarList, '=====');
 })();
